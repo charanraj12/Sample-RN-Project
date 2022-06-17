@@ -1,6 +1,6 @@
 import * as React from 'react'
 import { View, Text, Animated } from "react-native";
-import { OrderComponent as OrderComponentInterface } from '../utils/interfaces'
+import { OrderComponent as OrderComponentInterface } from 'utils/interfaces'
 
 import styles from "./OrderLineItem.styles"
 

@@ -1,5 +1,5 @@
-import { AppThunk } from "./store";
-import { Api } from "../utils/helpers";
+import { AppThunk } from "app/store";
+import { Api } from "../../utils/helpers";
 import {setEarningsData} from './slices/earningsData';
 
 export const fetchEarningData = (): AppThunk => (dispatch) => {

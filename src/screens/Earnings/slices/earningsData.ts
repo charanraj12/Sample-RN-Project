@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import * as interfaces from '../../utils/interfaces'
+import * as interfaces from 'utils/interfaces'
 
 const initialState: interfaces.Earnings = {
     totalEarnings: 0,

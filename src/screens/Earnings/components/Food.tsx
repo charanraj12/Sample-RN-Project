@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useAppDispatch, useAppSelector } from '../app/hooks'
+import { useAppDispatch, useAppSelector } from 'app/hooks'
 import { View, FlatList } from "react-native"
 import Summary from "./Summary"
 import OrderLineItem from "./OrderLineItem"
-import { fetchEarningData } from "../app/api"
-import { OrderLineItem as OrderLineItemInterface } from "../utils/interfaces"
+import { fetchEarningData } from "../api"
+import { OrderLineItem as OrderLineItemInterface } from "utils/interfaces"
 
 import styles from "./EarningsData.style"
 

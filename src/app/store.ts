@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action, combineReducers } from '@reduxjs/toolkit';
-import earningsData from './slices/earningsData'
+import earningsData from '../screens/Earnings/slices/earningsData'
 
 export const store = configureStore({
   reducer: {

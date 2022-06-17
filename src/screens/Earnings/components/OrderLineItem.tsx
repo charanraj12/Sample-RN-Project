@@ -2,8 +2,8 @@ import * as React from 'react'
 import { Image, View, Text, TouchableWithoutFeedback, Animated, Easing } from "react-native";
 import OrderComponent from './OrderComponent'
 import styles from "./OrderLineItem.styles"
-import { OrderLineItem as OrderLineItemInterface } from "../utils/interfaces"
-import { titleCase } from "../utils/helpers"
+import { OrderLineItem as OrderLineItemInterface } from "../../../utils/interfaces"
+import { titleCase } from "../../../utils/helpers"
 
 const OrderId = ({ id }: { id: string }) => {
     const endChars = id.substring(id.length - 6);
@@ -52,17 +52,17 @@ const OrderLineItem: React.FC<OrderLineItemInterface> = (props) => {
                 <View style={styles.idTimeDistance}>
                     <View style={styles.clientLogoId}>
                         <>
-                            {props.customerCode === 'Swiggy' ? <Image source={require(`../../assets/images/client_logo/swiggy.png`)} style={styles.clientLogo} /> :
-                                props.customerCode === 'Zomato' ? <Image source={require(`../../assets/images/client_logo/zomato.png`)} style={styles.clientLogo} /> :
-                                    props.customerCode === 'Flipkart' ? <Image source={require(`../../assets/images/client_logo/flipkart.png`)} style={styles.clientLogo} /> :
-                                        props.customerCode === 'Amazon' ? <Image source={require(`../../assets/images/client_logo/amazon.png`)} style={styles.clientLogo} /> :
-                                            props.customerCode === 'Zepto' ? <Image source={require(`../../assets/images/client_logo/zepto.png`)} style={styles.clientLogo} /> :
-                                                <Image source={require(`../../assets/images/client_logo/client_logo.png`)} style={styles.clientLogo} />}</>
+                            {props.customerCode === 'Swiggy' ? <Image source={require(`../../../../assets/images/client_logo/swiggy.png`)} style={styles.clientLogo} /> :
+                                props.customerCode === 'Zomato' ? <Image source={require(`../../../../assets/images/client_logo/zomato.png`)} style={styles.clientLogo} /> :
+                                    props.customerCode === 'Flipkart' ? <Image source={require(`../../../../assets/images/client_logo/flipkart.png`)} style={styles.clientLogo} /> :
+                                        props.customerCode === 'Amazon' ? <Image source={require(`../../../../assets/images/client_logo/amazon.png`)} style={styles.clientLogo} /> :
+                                            props.customerCode === 'Zepto' ? <Image source={require(`../../../../assets/images/client_logo/zepto.png`)} style={styles.clientLogo} /> :
+                                                <Image source={require(`../../../../assets/images/client_logo/client_logo.png`)} style={styles.clientLogo} />}</>
                         <OrderId id={props.wayBillNumberText} />
                     </View>
                     <View style={styles.timeDistance}>
                         <Text style={styles.timeDistanceText}>{props.timeText}</Text>
-                        <Image source={require('../../assets/images/bullet.png')} style={styles.bulletIcon} />
+                        <Image source={require('../../../../assets/images/bullet.png')} style={styles.bulletIcon} />
                         <Text style={styles.timeDistanceText}>{`${props.distance} KM`}</Text>
                     </View>
                 </View>
@@ -71,7 +71,7 @@ const OrderLineItem: React.FC<OrderLineItemInterface> = (props) => {
                         <Text style={styles.amount}>{`\u20B9 ${props.amount}`}</Text>
                         <Text style={[styles.paymentType, props.paymentMode === 'prepaid' ? styles.prepaid : styles.cod]}>{props.paymentMode !== 'COD' ? titleCase(props.paymentMode) : props.paymentMode}</Text>
                     </View>
-                    <Animated.Image source={require('../../assets/images/arrow_icon.png')} style={logoStyles} />
+                    <Animated.Image source={require('../../../../assets/images/arrow_icon.png')} style={logoStyles} />
                 </View>
             </View>
             {expanded ? <>

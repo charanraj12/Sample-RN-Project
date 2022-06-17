@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, FlatList } from "react-native"
 import Summary from "./Summary"
 import OrderLineItem from "./OrderLineItem"
-import { OrderLineItem as OrderLineItemInterface } from "../utils/interfaces"
+import { OrderLineItem as OrderLineItemInterface } from "utils/interfaces"
 
 import styles from "./Food.styles"
 
